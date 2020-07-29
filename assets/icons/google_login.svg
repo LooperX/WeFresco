@@ -1,0 +1,12 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="31.333" height="31.333" viewBox="0 0 31.333 31.333">
+  <g id="symbol" transform="translate(15.667 15.667)">
+    <g id="symbol-2" data-name="symbol" transform="translate(-15.667 -15.667)">
+      <path id="Tracciato_12" data-name="Tracciato 12" d="M7.344,109.749A8.272,8.272,0,0,1,8.515,105.5v-5.282H3.233a15.675,15.675,0,0,0,0,19.067H8.515V114A8.272,8.272,0,0,1,7.344,109.749Z" transform="translate(0 -94.082)" fill="#fbbd00"/>
+      <path id="Tracciato_13" data-name="Tracciato 13" d="M199.672,374.126,196,377.8l3.672,3.672a15.548,15.548,0,0,0,9.534-3.233v-5.276h-5.276A8.322,8.322,0,0,1,199.672,374.126Z" transform="translate(-184.005 -350.137)" fill="#0f9d58"/>
+      <path id="Tracciato_14" data-name="Tracciato 14" d="M58.1,325.477l-5.282,5.282a15.914,15.914,0,0,0,1.356,1.544,15.564,15.564,0,0,0,11.078,4.589v-7.344A8.326,8.326,0,0,1,58.1,325.477Z" transform="translate(-49.59 -305.558)" fill="#31aa52"/>
+      <path id="Tracciato_15" data-name="Tracciato 15" d="M271.667,200.915a15.806,15.806,0,0,0-.257-2.838l-.138-.753H256v7.344h7.433a8.285,8.285,0,0,1-3.175,3.4l5.276,5.276a15.908,15.908,0,0,0,1.544-1.356A15.564,15.564,0,0,0,271.667,200.915Z" transform="translate(-240.333 -185.248)" fill="#3c79e6"/>
+      <path id="Tracciato_16" data-name="Tracciato 16" d="M205.557,9.781l.649.649L211.4,5.238l-.649-.649A15.564,15.564,0,0,0,199.672,0L196,3.672l3.672,3.672A8.269,8.269,0,0,1,205.557,9.781Z" transform="translate(-184.005 0)" fill="#cf2d48"/>
+      <path id="Tracciato_17" data-name="Tracciato 17" d="M65.256,7.344V0A15.565,15.565,0,0,0,54.178,4.589a15.9,15.9,0,0,0-1.356,1.544L58.1,11.415a8.327,8.327,0,0,1,7.152-4.071Z" transform="translate(-49.589 0)" fill="#eb4132"/>
+    </g>
+  </g>
+</svg>

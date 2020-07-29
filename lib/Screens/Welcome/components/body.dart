@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:wefresco/Screens/SignIn/signin_screen.dart';
 import 'package:wefresco/components/rounded_button.dart';
 import 'package:wefresco/constants.dart';
 import 'package:wefresco/strings.dart';
@@ -25,11 +26,13 @@ class Body extends StatelessWidget {
           children: <Widget>[
             RichText(
               text: TextSpan(
-                style: TextStyle(fontSize: 30.0, fontFamily: 'Nunito', color: Colors.black87),
+                style: TextStyle(
+                    fontSize: 30.0,
+                    fontFamily: kPrimaryFontName,
+                    color: Colors.black87),
                 children: <TextSpan>[
                   TextSpan(
-                    text:
-                    "Benvenuto su\n",
+                    text: "Benvenuto su\n",
                     style: TextStyle(
                       fontWeight: FontWeight.bold,
                       fontSize: 30.0,
@@ -54,8 +57,7 @@ class Body extends StatelessWidget {
                 style: TextStyle(fontSize: 15.0),
                 children: <TextSpan>[
                   TextSpan(
-                    text:
-                        "Acquistare frutta e verdura online non è mai stato così semplice e naturale!\nSappiamo quanto la relazione coi venditori ti sia importante, quanto la ",
+                    text: welcome_text_1,
                     style: TextStyle(color: kBlackLight),
                   ),
                   TextSpan(
@@ -63,8 +65,7 @@ class Body extends StatelessWidget {
                     style: TextStyle(color: kPrimaryColor),
                   ),
                   TextSpan(
-                    text:
-                    "dei prodotti che acquisti sia fondamentale e quanto tu sia attento ogni giorno a selezionare solo i ",
+                    text: welcome_text_2,
                     style: TextStyle(color: kBlackLight),
                   ),
                   TextSpan(
@@ -90,11 +91,22 @@ class Body extends StatelessWidget {
                     text: "Inizia subito!",
                     color: kPrimaryColor,
                     textColor: Colors.white,
+                    padding_vertical: 13,
+                    padding_horizontal: 20,
                     icon: Icon(
                       Icons.arrow_forward,
                       color: Colors.white,
                     ),
-                    press: () {},
+                    press: () {
+                      Navigator.push(
+                        context,
+                        MaterialPageRoute(
+                          builder: (context) {
+                            return SignInScreen();
+                          },
+                        ),
+                      );
+                    },
                   ),
                 ],
               ),

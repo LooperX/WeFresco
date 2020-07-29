@@ -4,7 +4,9 @@ import 'package:wefresco/constants.dart';
 class RoundedButton extends StatelessWidget {
   final String text;
   final Icon icon;
+  final width;
   final Function press;
+  final double padding_vertical, padding_horizontal;
   final Color color, textColor, iconColor;
   const RoundedButton({
     Key key,
@@ -13,7 +15,8 @@ class RoundedButton extends StatelessWidget {
     this.color = kPrimaryColor,
     this.textColor = Colors.white,
     this.iconColor = Colors.white,
-    this.icon,
+    this.icon, this.padding_vertical, this.padding_horizontal,
+    this.width = 0.5,
   }) : super(key: key);
 
   @override
@@ -21,20 +24,21 @@ class RoundedButton extends StatelessWidget {
     Size size = MediaQuery.of(context).size;
     return Container(
       margin: EdgeInsets.symmetric(vertical: 10),
-      width: size.width * 0.7,
+      width: size.width * width,
       decoration: BoxDecoration(
         boxShadow: [
           BoxShadow(
-            color: color.withOpacity(0.5),
-            blurRadius: 50,
+            color: color.withOpacity(0.4),
+            blurRadius: 15,
+            spreadRadius: 2,
             offset: Offset(0, 10), //// changes position of shadow
           ),
         ],
       ),
       child: ClipRRect(
-        borderRadius: BorderRadius.circular(29),
-        child: FlatButton(
-          padding: EdgeInsets.symmetric(vertical: 20, horizontal: 20),
+        borderRadius: BorderRadius.circular(kBorderRadiusValue),
+        child: RaisedButton(
+          padding: EdgeInsets.symmetric(vertical: padding_vertical, horizontal: padding_horizontal),
           color: color,
           onPressed: press,
           child: icon != null
@@ -48,7 +52,7 @@ class RoundedButton extends StatelessWidget {
                     Text(
                       text,
                       style: TextStyle(
-                          fontFamily: 'Nunito',
+                          fontFamily: kPrimaryFontName,
                           color: textColor,
                           fontSize: 20.0),
                     ),
@@ -59,10 +63,11 @@ class RoundedButton extends StatelessWidget {
               : Text(
                   text,
                   style: TextStyle(
-                      fontFamily: 'Nunito', color: textColor, fontSize: 20.0),
+                      fontFamily: kPrimaryFontName, color: textColor, fontSize: 20.0),
                 ),
         ),
       ),
     );
   }
 }
+
