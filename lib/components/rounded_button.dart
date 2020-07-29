@@ -3,6 +3,7 @@ import 'package:wefresco/constants.dart';
 
 class RoundedButton extends StatelessWidget {
   final String text;
+  final double fontSize;
   final Icon icon;
   final width;
   final Function press;
@@ -16,7 +17,7 @@ class RoundedButton extends StatelessWidget {
     this.textColor = Colors.white,
     this.iconColor = Colors.white,
     this.icon, this.padding_vertical, this.padding_horizontal,
-    this.width = 0.5,
+    this.width = 0.5, this.fontSize = 20.0,
   }) : super(key: key);
 
   @override
@@ -54,7 +55,7 @@ class RoundedButton extends StatelessWidget {
                       style: TextStyle(
                           fontFamily: kPrimaryFontName,
                           color: textColor,
-                          fontSize: 20.0),
+                          fontSize: fontSize),
                     ),
                     icon,
                   ],
@@ -63,7 +64,7 @@ class RoundedButton extends StatelessWidget {
               : Text(
                   text,
                   style: TextStyle(
-                      fontFamily: kPrimaryFontName, color: textColor, fontSize: 20.0),
+                      fontFamily: kPrimaryFontName, color: textColor, fontSize: fontSize),
                 ),
         ),
       ),
