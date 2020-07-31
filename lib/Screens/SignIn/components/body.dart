@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/svg.dart';
+import 'package:wefresco/Screens/HomePage/homepage_screen.dart';
 import 'package:wefresco/Screens/SignIn/components/social_login_button.dart';
 import 'package:wefresco/Screens/SignUp/signup_screen.dart';
 import 'package:wefresco/components/input_field.dart';
@@ -107,7 +108,17 @@ class _BodyState extends State<Body> {
                   padding_vertical: 13,
                   padding_horizontal: 0,
                   width: size.width,
-                  press: () {},
+                  press: () {
+                    //TODO: Check login information from server
+                    Navigator.push(
+                      context,
+                      MaterialPageRoute(
+                        builder: (context) {
+                          return HomePageScreen();
+                        },
+                      ),
+                    );
+                  },
                 ),
               ),
               Row(
@@ -127,8 +138,11 @@ class _BodyState extends State<Body> {
                   )
                 ],
               ),
+              SizedBox(
+                height: size.height * 0.05,
+              ),
               Padding(
-                padding: const EdgeInsets.only(top: 30.0, bottom: 10.0),
+                padding: const EdgeInsets.only(top: 20.0, bottom: 10.0),
                 child: const Divider(
                   color: kGreyLight200,
                   height: 5,

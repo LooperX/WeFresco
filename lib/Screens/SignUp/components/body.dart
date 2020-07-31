@@ -2,6 +2,7 @@ import 'dart:async';
 
 import 'package:flutter/material.dart';
 import 'package:flutter_spinkit/flutter_spinkit.dart';
+import 'package:wefresco/Screens/HomePage/homepage_screen.dart';
 import 'package:wefresco/components/back_button.dart';
 import 'package:wefresco/components/input_field.dart';
 import 'package:wefresco/components/rounded_button_loading.dart';
@@ -13,11 +14,16 @@ class Body extends StatefulWidget {
 }
 
 class _BodyState extends State<Body> {
-
   bool loading = false;
 
-  void _doSomething() async {
-    Timer(Duration(seconds: 3), () {});
+  void _wait() async {
+    Timer(Duration(seconds: 3), () {
+      Navigator.push(context, MaterialPageRoute(
+        builder: (context) {
+          return HomePageScreen();
+        },
+      ));
+    });
   }
 
   @override
@@ -115,9 +121,9 @@ class _BodyState extends State<Body> {
                 width: size.width,
                 press: () {
                   setState(() {
-                    if(!loading)
-                      loading = !loading;
+                    if (!loading) loading = !loading;
                     //TODO: send data to server
+                    _wait();  //TODO --> REMOVE
                   });
                 },
               ),
