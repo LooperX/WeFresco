@@ -20,7 +20,8 @@ class RoundedButtonLoading extends StatelessWidget {
     this.icon,
     this.padding_vertical,
     this.padding_horizontal,
-    this.width = 0.5, this.child,
+    this.width = 0.5,
+    this.child,
   }) : super(key: key);
 
   @override
@@ -30,6 +31,7 @@ class RoundedButtonLoading extends StatelessWidget {
       margin: EdgeInsets.symmetric(vertical: 10),
       width: size.width * width,
       decoration: BoxDecoration(
+          /*
         boxShadow: [
           BoxShadow(
             color: color.withOpacity(0.4),
@@ -37,8 +39,8 @@ class RoundedButtonLoading extends StatelessWidget {
             spreadRadius: 2,
             offset: Offset(0, 10), //// changes position of shadow
           ),
-        ],
-      ),
+        ],*/
+          ),
       child: ClipRRect(
         borderRadius: BorderRadius.circular(kBorderRadiusValue),
         child: RaisedButton(

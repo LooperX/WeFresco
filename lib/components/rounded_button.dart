@@ -16,8 +16,11 @@ class RoundedButton extends StatelessWidget {
     this.color = kPrimaryColor,
     this.textColor = Colors.white,
     this.iconColor = Colors.white,
-    this.icon, this.padding_vertical, this.padding_horizontal,
-    this.width = 0.5, this.fontSize = 20.0,
+    this.icon,
+    this.padding_vertical,
+    this.padding_horizontal,
+    this.width = 0.5,
+    this.fontSize = 20.0,
   }) : super(key: key);
 
   @override
@@ -39,7 +42,8 @@ class RoundedButton extends StatelessWidget {
       child: ClipRRect(
         borderRadius: BorderRadius.circular(kBorderRadiusValue),
         child: RaisedButton(
-          padding: EdgeInsets.symmetric(vertical: padding_vertical, horizontal: padding_horizontal),
+          padding: EdgeInsets.symmetric(
+              vertical: padding_vertical, horizontal: padding_horizontal),
           color: color,
           onPressed: press,
           child: icon != null
@@ -64,11 +68,12 @@ class RoundedButton extends StatelessWidget {
               : Text(
                   text,
                   style: TextStyle(
-                      fontFamily: kPrimaryFontName, color: textColor, fontSize: fontSize),
+                      fontFamily: kPrimaryFontName,
+                      color: textColor,
+                      fontSize: fontSize),
                 ),
         ),
       ),
     );
   }
 }
-

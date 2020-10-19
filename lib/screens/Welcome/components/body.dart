@@ -61,8 +61,9 @@ class Body extends StatelessWidget {
                     style: TextStyle(color: kBlackLight),
                   ),
                   TextSpan(
-                    text: "naturalità ",
-                    style: TextStyle(color: kPrimaryColor),
+                    text: "naturalezza ",
+                    style: TextStyle(
+                        color: kSecondaryColor, fontWeight: FontWeight.bold),
                   ),
                   TextSpan(
                     text: welcome_text_2,
@@ -70,7 +71,8 @@ class Body extends StatelessWidget {
                   ),
                   TextSpan(
                     text: "prodotti migliori ",
-                    style: TextStyle(color: kPrimaryColor),
+                    style: TextStyle(
+                        color: kSecondaryColor, fontWeight: FontWeight.bold),
                   ),
                   TextSpan(
                     text: "da portare a tavola.",

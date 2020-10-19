@@ -13,6 +13,7 @@ class SocialLoginButton extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+    Size size = MediaQuery.of(context).size;
     return ClipRRect(
       borderRadius: BorderRadius.circular(kBorderRadiusValue),
       child: Container(
@@ -21,8 +22,8 @@ class SocialLoginButton extends StatelessWidget {
             icon: socialMethod == "google"
                 ? SvgPicture.asset("assets/icons/google_login.svg")
                 : SvgPicture.asset("assets/icons/facebook_login.svg"),
-            iconSize: 30,
-            padding: EdgeInsets.all(20),
+            iconSize: size.height * 0.04,
+            padding: EdgeInsets.all(size.height * 0.02),
             onPressed: press),
       ),
     );
